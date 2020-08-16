@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='stylesheets/Login.css' />
+    <script src="https://kit.fontawesome.com/5d75235202.js" crossorigin="anonymous"></script>
+  </head>
+ 
+  <body>
+
+    <%
+    if(msg  != '') {  %>
+      <div class="alert alert-success">
+        <strong> <%=msg %></strong>
+      </div>
+    <%}%>
+
+  
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                 <img src="images/covid.jpg" alt="Image" width="400px " height="300px" />
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Login  Form </h3>
+                    <form method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email" name="useremail"  required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password *" name="userpassword"  required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                        <div class="form-group">
+
+                            <a href="/signup" class="ForgetPwd" >Create New Account </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+  </body>
+
+
+  </html>   

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>World Data</title>
+ <%-include('./header') %>
+ <link rel='stylesheet' href='https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css' />
+   
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/dashboard">Covid -19 Tracking System  </a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/dashboard">Dash Board</a></li>
+            <li class="active"><a href="/world">World</a></li>
+            <li><a href="/india">India</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=LoginUserName%> </a></li>
+        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      
+  
+<div class="container">
+
+    <table id="covidList" class="table table-striped table-primary">
+        <thead>
+            <tr>
+              <th scope="col">Country Name</th>
+              <th scope="col">Total Case</th>
+              <th scope="col">Active</th>
+              <th scope="col">Recovered </th>
+              <th scope="col">Death</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%
+              data.map((res)=>{
+              %>
+              <tr>
+                <td><%=res.Country%></td>
+                <td><%=res.TotalConfirmed%></td>
+                <td><%=res.NewConfirmed%></td>
+                <td><%=res.TotalRecovered%></td>
+                <td><%=res.TotalDeaths%></td>
+                
+              </tr>
+    
+            <% }) %>
+          </tbody>
+    </table>
+    
+</div>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script> 
+<script>
+    $(document).ready(function() {
+    $('#covidList').DataTable();
+} );
+</script>
+</body>
+</html>

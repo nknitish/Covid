@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dash Board</title>
+ <%-include('./header') %>
+ <link rel='stylesheet' href='stylesheets/dashboard.css' />
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/dashboard">Covid -19 Tracking System  </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active" ><a href="/dashboard">Dash Board</a></li>
+        <li><a href="/world">World</a></li>
+        <li><a href="/india">India</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=LoginUserName%> </a></li>
+        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+<div class="container">
+<br> 
+  <div class="row">
+    <div class="col-md-12">
+        <div class="well well-sm">
+          <h3>GLOBAL <i class="fa fa-globe" aria-hidden="false"></i> DASHBOARD </h3>
+        </div>
+
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="panel panel-primary"> 
+        <div class="panel-heading">
+          <h2 style="font-size: 72px;"><i class="fa fa-user" aria-hidden="true"></i> </h2>
+          <h2> <%=data.TotalConfirmed %> </h2>
+          </div>
+        <div class="panel-footer">
+         <h4>TOTAL CASE</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="panel panel-info"> 
+        <div class="panel-heading">
+          <h2 style="font-size: 72px;"><i class="fa fa-bed" aria-hidden="true"></i> </h2>
+          <h2> <%=data.NewConfirmed %> </h2>
+          </div>
+        <div class="panel-footer">
+         <h4>ACTIVE CASE</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="panel  panel-success"> 
+        <div class="panel-heading">
+          <h2 style="font-size: 72px;"><i class="fa fa-check-circle-o" aria-hidden="true"></i> </h2>
+          <h2> <%=data.TotalRecovered %> </h2>
+          </div>
+        <div class="panel-footer">
+         <h4>RECOVERED CASE</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="panel panel-danger "> 
+        <div class="panel-heading">
+          <h2 style="font-size: 72px;"> <i class="fa fa-times" aria-hidden="true"></i> </h2>
+          <h2> <%=data.TotalDeaths %> </h2>
+          </div>
+        <div class="panel-footer">
+         <h4>TOTAL DEATH</h4> 
+        </div>
+      </div>
+    </div>
+
+    
+  </div> 
+  <!-- row div End -->
+
+ </div>
+<!-- container div End -->
+  
+
+
+</body>
+</html>

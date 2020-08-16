@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='stylesheets/signup.css' />
+    <script src="https://kit.fontawesome.com/5d75235202.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  
+    
+    <%
+    if(msg  != '') {  %>
+      <div class="alert alert-success">
+        <strong><%=msg %></strong> 
+      </div>
+    <%}%>
+
+
+  <div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                  <img src="images/StayHome.jpg" alt="Image" width="450px " height="500px" />
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Sign Up Form </h3>
+                    <form method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Name " name="username" required="true" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email *" name="useremail" required="true" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Enter Password *" name="userpassword" required="true"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Confirm Password" name="cnfpassword" required="true" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Signup" />
+                        </div>
+                        <div class="form-group">
+
+                            <a href="/" class="ForgetPwd" >Already have Account ? Login Here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+  </body>
+
+
+  </html>   

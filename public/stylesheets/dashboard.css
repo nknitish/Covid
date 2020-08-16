@@ -1,0 +1,31 @@
+.container .row .panel-primary .panel-heading h2{
+    font-size: 50px;
+}
+.container .row .panel-info .panel-heading h2{
+    font-size: 50px;
+}
+
+.container .row .panel-success .panel-heading h2{
+    font-size: 50px;
+}
+.container .row .panel-danger .panel-heading h2{
+    font-size: 50px;
+}
+
+.container .row .panel-info .panel-heading {
+    font-size: 50px;
+    background-color: #bc4ddb;
+    color : white;
+}
+
+.container .row .panel-success .panel-heading {
+    font-size: 50px;
+    background-color: #39c922;
+    color : white;
+}
+
+.container .row .panel-danger .panel-heading {
+    font-size: 50px;
+    background-color: #d11723;
+    color : white;
+}
